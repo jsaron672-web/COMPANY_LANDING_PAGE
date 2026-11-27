@@ -106,3 +106,44 @@ if (form) {
     if (ok) form.reset();
   });
 }
+
+// 8) Lead form (Name, Contact Number, Best Time to Call, Target Location)
+// To receive entries, paste your form endpoint below (e.g. a Formspree or Google Apps Script URL).
+const LEAD_ENDPOINT = '';
+const leadForm = $('#lead-form');
+if (leadForm) {
+  leadForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = leadForm.elements, msg = $('#lead-msg');
+    let ok = true;
+    function check(field, good, text) {
+      field.classList.toggle('invalid', !good);
+      field.parentElement.querySelector('.err').textContent = good ? '' : text;
+      if (!good) ok = false;
+    }
+    check(f.name, f.name.value.trim().length >= 2, 'Please enter your name.');
+    check(f.phone, /^[0-9+()\-\s]{7,}$/.test(f.phone.value.trim()), 'Please enter a valid contact number.');
+    check(f.time, f.time.value !== '', 'Please choose a time.');
+    check(f.location, f.location.value.trim().length >= 2, 'Please enter your target location.');
+    msg.className = '';
+    if (!ok) { msg.textContent = ''; return; }
+    if (!LEAD_ENDPOINT) {
+      msg.textContent = 'Looks good, ' + f.name.value.trim() + '! (Demo only: this form is not connected yet, so nothing was sent.)';
+      leadForm.reset();
+      return;
+    }
+    try {
+      const res = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: f.name.value.trim(), phone: f.phone.value.trim(), bestTimeToCall: f.time.value, targetLocation: f.location.value.trim() })
+      });
+      if (!res.ok) throw new Error('bad response');
+      msg.textContent = 'Thank you, ' + f.name.value.trim() + '! We will call you soon.';
+      leadForm.reset();
+    } catch (err) {
+      msg.className = 'bad';
+      msg.textContent = 'Sorry, something went wrong. Please try again.';
+    }
+  });
+}

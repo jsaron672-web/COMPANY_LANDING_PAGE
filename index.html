@@ -33,7 +33,7 @@
     <div>
       
       <h1>Dito, <span>Special Ka!</span></h1>
-      <p class="lead">Confectionery is a fast-growing Filipino halo-halo brand that started in the pandemic and is now expanding nationwide through franchising.</p>
+      <p class="lead">We are a Filipino halo-halo company built on purpose, powered by system, and driven by people.</p>
       <div class="btns">
         <a class="btn gold" href="#franchise">Franchise with us</a>
         <a class="btn ghost" href="#about">Learn more</a>
@@ -46,12 +46,36 @@
 <section class="stats">
   <div class="wrap">
     <div class="stat-grid">
-      <div class="stat"><b>5</b><span>Company-owned branches</span></div>
+      <div class="stat stat-hook"><div class="stat-icon" aria-hidden="true">💰</div><b>₱72.21</b><span>Average gross profit per cup</span></div>
       <div class="stat"><b>5+</b><span>Years in operation</span></div>
       <div class="stat"><b>₱2,500</b><span>Founder’s original startup capital</span></div>
       <div class="stat"><b>1</b><span>Movement: “Dito, Special Ka!”</span></div>
     </div>
     <p class="quote">“Dito, Special Ka.” is a movement that empowers people to become consistent, pursue growth, and experience real-life transformation.</p>
+  </div>
+</section>
+
+<section id="lead">
+  <div class="wrap narrow">
+    <div class="center">
+      <span class="tag">Get in touch</span>
+      <h2>Request a call back</h2>
+      <p class="lead">Leave your details and our team will reach out to you.</p>
+    </div>
+    <form id="lead-form" class="lead-form" novalidate>
+      <div class="field"><label for="l-name"><span class="ficon" aria-hidden="true">👤</span>Name</label><input id="l-name" name="name" type="text" autocomplete="name"><span class="err"></span></div>
+      <div class="field"><label for="l-phone"><span class="ficon" aria-hidden="true">📞</span>Contact Number</label><input id="l-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09XX XXX XXXX"><span class="err"></span></div>
+      <div class="field"><label for="l-time"><span class="ficon" aria-hidden="true">🕘</span>Best Time to Call</label>
+        <select id="l-time" name="time">
+          <option value="">Choose a time</option>
+          <option>Morning (8am–12pm)</option>
+          <option>Afternoon (12pm–5pm)</option>
+          <option>Evening (5pm–8pm)</option>
+          <option>Anytime</option>
+        </select><span class="err"></span></div>
+      <div class="field"><label for="l-loc"><span class="ficon" aria-hidden="true">📍</span>Target Location</label><input id="l-loc" name="location" type="text" placeholder="City / Province"><span class="err"></span></div>
+      <div class="full"><button class="btn gold" type="submit">Request a call</button><p id="lead-msg" role="status"></p></div>
+    </form>
   </div>
 </section>
 
@@ -103,10 +127,10 @@
 <section class="alt">
   <div class="wrap split">
     <div class="grid4">
-      <img src="m1.jpg" alt="Customers enjoying halo-halo">
-      <img src="m2.jpg" alt="Customers enjoying halo-halo at a branch">
-      <img src="m3.jpg" alt="Smiling customers at a Confectionery branch">
-      <img src="m4.jpg" alt="Staff and customers at a Confectionery store">
+      <img src="photos/regalado.jpg" alt="Customers crowding our stall" loading="lazy">
+      <img src="photos/nova.jpg" alt="Grand opening crowd at a Confectionery branch" loading="lazy">
+      <img src="photos/trees.jpg" alt="Customers lining up at our pop-up stall" loading="lazy">
+      <img src="photos/da.jpg" alt="Our team on opening day" loading="lazy">
     </div>
     <div>
       <span class="tag">Our movement</span>
@@ -196,10 +220,10 @@
   <div class="wrap">
     <div class="center"><span class="tag">Our flavors</span><h2>Available products</h2><p class="lead">Tap a card to see more details.</p></div>
     <div class="cards pgrid">
+      <article class="pcard"><img src="c4.jpg" alt="Ube Halo-Halo"><div class="pbody"><h3>Ube Halo-Halo</h3><p>Ube shaved ice layered with classic toppings, finished with a scoop of ube ice cream.</p><p class="price">₱159</p><button class="btn" data-popup>View details</button></div></article>
       <article class="pcard"><img src="c1.jpg" alt="Buko Pandan Halo-Halo"><div class="pbody"><h3>Buko Pandan Halo-Halo</h3><p>Refreshing pandan shaved ice with buko and jellies, topped with a scoop of ice cream.</p><p class="price">₱159</p><button class="btn" data-popup>View details</button></div></article>
       <article class="pcard"><img src="c2.jpg" alt="Milky Halo-Halo"><div class="pbody"><h3>Milky Halo-Halo</h3><p>Creamy milky shaved ice with classic halo-halo toppings and a scoop of ube ice cream.</p><p class="price">₱149</p><button class="btn" data-popup>View details</button></div></article>
       <article class="pcard"><img src="c3.jpg" alt="Saging con Leche"><div class="pbody"><h3>Saging con Leche</h3><p>Milky shaved ice with sweet saging and a rich orange syrup layer.</p><p class="price">₱119</p><button class="btn" data-popup>View details</button></div></article>
-      <article class="pcard"><img src="c4.jpg" alt="Ube Halo-Halo"><div class="pbody"><h3>Ube Halo-Halo</h3><p>Ube shaved ice layered with classic toppings, finished with a scoop of ube ice cream.</p><p class="price">₱159</p><button class="btn" data-popup>View details</button></div></article>
       <article class="pcard"><img src="c5.jpg" alt="Mais con Leche"><div class="pbody"><h3>Mais con Leche</h3><p>Milky shaved ice with sweet corn and a scoop of ice cream on top.</p><p class="price">₱149</p><button class="btn" data-popup>View details</button></div></article>
     </div>
   </div>
@@ -209,23 +233,37 @@
   <div class="wrap">
     <div class="center"><span class="tag">Gallery</span><h2>Moments at Confectionery</h2><p class="lead">Our people, our customers, and our halo-halo.</p></div>
     <div class="slider" aria-roledescription="carousel" aria-label="Photo slideshow">
-      <figure class="slide"><img src="team.jpg" alt="The Confectionery team"><figcaption>The Confectionery team</figcaption></figure>
-      <figure class="slide"><img src="m1.jpg" alt="Smiles at our branch"><figcaption>Smiles at our branch</figcaption></figure>
-      <figure class="slide"><img src="m2.jpg" alt="Halo-halo time"><figcaption>Halo-halo time</figcaption></figure>
-      <figure class="slide"><img src="m3.jpg" alt="Our Dito, Special Ka! community"><figcaption>Our Dito, Special Ka! community</figcaption></figure>
-      <figure class="slide"><img src="m4.jpg" alt="Team and customers"><figcaption>Team and customers</figcaption></figure>
-      <figure class="slide"><img src="products.png" alt="Our halo-halo flavors"><figcaption>Our halo-halo flavors</figcaption></figure>
+            <figure class="slide"><img src="photos/g1.jpg" alt="Franchise consultation booth"><figcaption>Franchise consultation booth</figcaption></figure>
+      <figure class="slide"><img src="team.jpg" alt="The Confectionery team" loading="lazy"><figcaption>The Confectionery team</figcaption></figure>
+      <figure class="slide"><img src="photos/g3.jpg" alt="Team outing" loading="lazy"><figcaption>Team outing</figcaption></figure>
+      <figure class="slide"><img src="photos/cavite.jpg" alt="Branch opening with the team" loading="lazy"><figcaption>Branch opening with the team</figcaption></figure>
+      <figure class="slide"><img src="photos/regalado.jpg" alt="Crowd at our stall" loading="lazy"><figcaption>Crowd at our stall</figcaption></figure>
+      <figure class="slide"><img src="photos/nova.jpg" alt="Grand opening crowd" loading="lazy"><figcaption>Grand opening crowd</figcaption></figure>
+      <figure class="slide"><img src="photos/g2.jpg" alt="Team bonding night" loading="lazy"><figcaption>Team bonding night</figcaption></figure>
+      <figure class="slide"><img src="photos/trees.jpg" alt="Pop-up stall" loading="lazy"><figcaption>Pop-up stall</figcaption></figure>
+      <figure class="slide"><img src="photos/batasan.jpg" alt="Ribbon-cutting day" loading="lazy"><figcaption>Ribbon-cutting day</figcaption></figure>
+      <figure class="slide"><img src="photos/litex.jpg" alt="Opening day with our team" loading="lazy"><figcaption>Opening day with our team</figcaption></figure>
+      <figure class="slide"><img src="photos/da.jpg" alt="We are now open!" loading="lazy"><figcaption>We are now open!</figcaption></figure>
+      <figure class="slide"><img src="photos/riverside.jpg" alt="Grand opening promo" loading="lazy"><figcaption>Grand opening promo</figcaption></figure>
+      <figure class="slide"><img src="photos/g4.jpg" alt="Team celebration" loading="lazy"><figcaption>Team celebration</figcaption></figure>
       <button class="s-btn prev" aria-label="Previous photo">‹</button>
       <button class="s-btn next" aria-label="Next photo">›</button>
     </div>
     <div class="dots"></div>
     <div class="ggrid">
-      <img src="team.jpg" alt="The Confectionery team">
-      <img src="m1.jpg" alt="Smiles at our branch">
-      <img src="m2.jpg" alt="Halo-halo time">
-      <img src="m3.jpg" alt="Our Dito, Special Ka! community">
-      <img class="more hidden" src="m4.jpg" alt="Team and customers">
-      <img class="more hidden" src="products.png" alt="Our halo-halo flavors">
+      <img src="photos/g1.jpg" alt="Franchise consultation booth" loading="lazy">
+      <img src="team.jpg" alt="The Confectionery team" loading="lazy">
+      <img src="photos/g3.jpg" alt="Team outing" loading="lazy">
+      <img src="photos/cavite.jpg" alt="Branch opening with the team" loading="lazy">
+      <img src="photos/regalado.jpg" alt="Crowd at our stall" loading="lazy">
+      <img src="photos/nova.jpg" alt="Grand opening crowd" loading="lazy">
+      <img class="more hidden" src="photos/g2.jpg" alt="Team bonding night" loading="lazy">
+      <img class="more hidden" src="photos/trees.jpg" alt="Pop-up stall" loading="lazy">
+      <img class="more hidden" src="photos/batasan.jpg" alt="Ribbon-cutting day" loading="lazy">
+      <img class="more hidden" src="photos/litex.jpg" alt="Opening day with our team" loading="lazy">
+      <img class="more hidden" src="photos/da.jpg" alt="We are now open!" loading="lazy">
+      <img class="more hidden" src="photos/riverside.jpg" alt="Grand opening promo" loading="lazy">
+      <img class="more hidden" src="photos/g4.jpg" alt="Team celebration" loading="lazy">
     </div>
     <p class="center" style="margin-top:22px"><button class="btn ghost" id="more-btn">View more</button></p>
   </div>
@@ -291,13 +329,7 @@
 <section class="alt" id="contact-info">
   <div class="wrap">
     <div class="center"><span class="tag">Contact</span><h2>Visit or message us</h2><p class="lead">Questions about our halo-halo or about partnering with us? Reach out.</p></div>
-    <div class="split top">
-      <div class="infos">
-        <div class="info"><div class="icon">📍</div><div><h3>Address</h3><p>Add your branch address here</p></div></div>
-        <div class="info"><div class="icon">📞</div><div><h3>Contact number</h3><p>Add your contact number here</p></div></div>
-        <div class="info"><div class="icon">💌</div><div><h3>Email and social media</h3><p>Add your email and Facebook / Instagram here</p></div></div>
-        <div class="info"><div class="icon">🕘</div><div><h3>Business hours</h3><p>Add your business hours here</p></div></div>
-      </div>
+    <div class="narrow contact-only">
       <form id="contact-form" novalidate>
         <div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name"><span class="err"></span></div>
         <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"><span class="err"></span></div>
